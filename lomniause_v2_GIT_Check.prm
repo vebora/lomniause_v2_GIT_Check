@@ -1,0 +1,8 @@
+[parameter:thinktime]
+Format="%lu"
+GenerateNewVal="EachOccurrence"
+MaxValue="240"
+MinValue="120"
+OriginalValue="120"
+ParamName="thinktime"
+Type="Random"

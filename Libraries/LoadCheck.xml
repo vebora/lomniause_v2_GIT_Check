@@ -1,0 +1,93 @@
+<truLibrary engineVersion="12.60.1053.0" timestamp="Fri Sep 21 2018 11:07:26 GMT+0000 (Coordinated Universal Time)">
+<step type="library" stepId="step:{d892bc57-3dc0-f3c8-21b0-0f7ade4a5380}" action="LoadCheck" level="43" arguments="{}" snapshotId="mhnmaejba"><step type="function" stepId="step:{865e36f1-9318-ec82-00d5-5107240c1666}" action="LoadCheck" level="1" arguments="{}" snapshotId="sjrd" index="1" argsSchema="{}"><step type="block" stepId="step:{5511271a-706b-251a-8705-dc752c8b167c}" action="internal" level="43" arguments="{}" snapshotId="kgtthvx"><step type="control" stepId="step:{e5c295a2-dc2a-9765-844f-22bb2dfb0a4b}" action="For" level="1" arguments="{&quot;Init&quot;:{&quot;value&quot;:&quot;var i = 0&quot;,&quot;evalJavaScript&quot;:true},&quot;Condition&quot;:{&quot;value&quot;:&quot;i &lt; 1&quot;,&quot;evalJavaScript&quot;:true},&quot;Increment&quot;:{&quot;value&quot;:&quot;i++&quot;,&quot;evalJavaScript&quot;:true}}" snapshotId="nnznog" index="1"><step type="block" stepId="step:{b5c4bc23-9913-5265-2261-6731b51273e1}" action="internal" level="43" arguments="{}" snapshotId="lckoyznq"><step type="testObject" stepId="step:{d98ccdc4-1582-bd75-55b0-df34fb6f0571}" action="Get Property" level="1" arguments="{&quot;Property&quot;:{&quot;value&quot;:&quot;Visible Text&quot;},&quot;Variable&quot;:{&quot;value&quot;:&quot;textValue&quot;,&quot;evalJavaScript&quot;:false}}" snapshotId="yizkkw" index="1" testObject="testObj:{c313d114-d091-42f3-1553-857df38b0634}"/><step type="util" stepId="step:{b8985a04-e45f-05ea-0176-d3d10c567c1c}" action="Evaluate JavaScript" level="1" arguments="{&quot;Code&quot;:{&quot;value&quot;:&quot;if(textValue==\&quot;Loading\&quot;)\n  {\n    i=0;\n  }&quot;}}" snapshotId="tcezezkxb" index="2"/></step></step></step></step><step type="function" stepId="step:{c33391bf-a6c6-3d7b-96d4-50d3e085b274}" action="ThinkTime" level="1" arguments="{}" snapshotId="cmszoo" index="2" argsSchema="{}"><step type="block" stepId="step:{6ab73b4e-523c-04e5-f4c2-b8547cdf9f71}" action="internal" level="43" arguments="{}" snapshotId="hjlapkem"><step type="util" stepId="step:{6a1a635c-96b3-c320-d521-cc6c84a290c1}" action="Wait" level="1" arguments="{&quot;Interval&quot;:{&quot;param&quot;:true,&quot;value&quot;:&quot;thinktime&quot;}}" snapshotId="qpwrcmcl" index="1"/></step></step></step>
+<testObjects><testObject testObjId="testObj:{c313d114-d091-42f3-1553-857df38b0634}" platform="web" autoName="Pick an account" manualName="All Assignments"><roles><role>element</role><role>heading</role></roles><idents active="JavaScript"><ident type="XPath"><![CDATA[{
+"primaryScore":1,
+"implData":{
+	"value":"//div[text()=\"Pick an account\"]",
+	"suggestions":["//div[text()=\"Pick an account\"]","/html/body/div/form[1]/div/div/div[1]/div[2]/div/div/div[1]","//div[@id=\"loginHeader\"]"]
+}
+}]]></ident><ident type="Electors"><![CDATA[{
+"primaryScore":0.6675990850000001,
+"implData":{
+	"ctxScore":0,
+	"electors":[
+		{"id":"tagName","value":"DIV","score":0.01},
+		{"id":"role","value":"heading","score":0.05},
+		{"id":"id","value":{"id":"loginHeader","isValidWord":false},"score":0.3},
+		{"id":"class","value":"row text-title","score":0.15},
+		{"id":"text","value":{"text":"Pick an account","tagName":"DIV"},"score":0.4},
+		{"id":"leaf","value":true,"score":0.01}
+	],
+	"secondaryData":{
+		"default": {
+				"totalObjs": 52,
+				"maxObjsPerElector": 200,
+				"total": {
+						"tagName": 48,
+						"role": 1,
+						"id": 1,
+						"class": 5,
+						"text": 1,
+						"leaf": null
+				},
+				"secondaryScore": 0,
+				"totalCandidates": 1
+		}
+}
+}
+}]]></ident><ident type="Descriptors"><![CDATA[{
+"primaryScore":1,
+"implData":{
+	"ctxScore":0,
+	"userModified":false,
+	"expression":
+		{"op":"and",
+		"active":true,
+		"args":[
+			{"op":"equalsIgnoreCase",
+			"active":true,
+			"descriptor":"tagName",
+			"args":[
+				{"op":"property", "args":"tagName"},
+				{"op": "value", "args":"DIV"}
+			]
+			},
+			{"op":"equalsIgnoreCase",
+			"active":true,
+			"descriptor":"role",
+			"args":[
+				{"op":"property", "args":"role"},
+				{"op": "value", "args":"heading"}
+			]
+			},
+			{"op":"equals",
+			"active":true,
+			"descriptor":"text",
+			"args":[
+				{"op":"property", "args":"text"},
+				{"op": "value", "args":"Pick an account"}
+			]
+			}
+		]
+		},
+	"secondaryData":{
+		"default": {
+				"maxObjsPerDescriptor": 200,
+				"total": {
+						"tagName": 48,
+						"role": 1,
+						"text": 1
+				},
+				"totalCandidates": 1
+		}
+}
+}
+}]]></ident><ident type="JavaScript"><![CDATA[{
+"primaryScore":1,
+"implData":{
+	"value":"//evalXPath(\"//div[text()=\\\"Loading\\\"]\");\n\nvar x=document.querySelectorAll(\"[id='loadingText']\");\nvar xlen=x.length;\n//window.alert(xlen);\nif(xlen==1)\n{\n  evalXPath(\"//div[@id=\\\"loadingText\\\"]\");\n}\nelse\n{\n    evalXPath(\"(//div[@id=\\\"loadingText\\\"])[\"+xlen+\"]\");\n  // evalXPath(\"(//div[@id=\\\"loadingText\\\"])[2]\");\n}"
+}
+}]]></ident></idents><methods><![CDATA[{
+}]]></methods></testObject></testObjects>
+<transactions/>
+</truLibrary>
